@@ -113,6 +113,18 @@ define service CatalogoDeProductos {
 define service Reports {
     entity AverageRating        as projection on proyecto.reports.AverageRating;
 
-    entity EntityCasting as select cast (Price as Integer ) as Price,
-    Price as Price2: Integer FROM proyecto.materials.Products;
+    entity EntityCasting        as
+        select
+            cast(
+                Price as      Integer
+            )     as Price,
+            Price as Price2 : Integer
+        from proyecto.materials.Products;
+
+    entity EntityExists         as
+        select from proyecto.materials.Products {
+            Name
+        }
+        where
+            exists Supplier[Name = 'John Doe'];
 }
