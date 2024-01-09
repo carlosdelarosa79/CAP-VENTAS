@@ -1,0 +1,16 @@
+### Get Orders obtenemos todos los pedidos
+GET http://localhost:4004/odata/v4/gestion-de-pedidos/GetOrders
+
+### Get Order obtenemos por filtro ('') un determinado cliente   !!!! ERROR HAY QUE ARREGLAR
+GET http://localhost:4004/odata/v4/gestion-de-pedidos/GetOrders('client6@client2.com')
+
+### Create Order creamos ordenes
+post http://localhost:4004/odata/v4/gestion-de-pedidos/CreateOrder 
+Content-Type: application/json
+
+{
+    "ClientEmail": "client6@client7.com",
+    "FirstName": "MILENA",
+    "LastName": "REYES",
+    "CreatedOn": "2024-01-08"
+}

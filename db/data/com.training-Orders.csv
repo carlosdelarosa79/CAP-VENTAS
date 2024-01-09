@@ -1,0 +1,7 @@
+ClientEmail;FirstName;LastName;CreatedOn;Reviewed;Approved;Country_code;
+client1@client1.com;Kyros;N. Ferris;2022-01-13;false;true;ES;
+client2@client2.com;Debbie;R. Morris;2023-06-09;false;false;UK;
+client3@client3.com;Terrence;J. Eagle;2024-11-27;false;true;ES;
+client4@client4.com;Carlos;R. rosa;2025-09-24;false;false;UK;
+client5@client5.com;laura;R. villa;2025-09-24;false;false;UK;
+client6@client6.com;carmen;R. rosa;2025-09-24;false;false;UK;
