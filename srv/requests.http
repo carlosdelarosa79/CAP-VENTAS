@@ -9,8 +9,43 @@ post http://localhost:4004/odata/v4/gestion-de-pedidos/CreateOrder
 Content-Type: application/json
 
 {
-    "ClientEmail": "client6@client7.com",
+    "ClientEmail": "client7@client7.com",
     "FirstName": "MILENA",
     "LastName": "REYES",
-    "CreatedOn": "2024-01-08"
+    "CreatedOn": "2022-01-08"
 }
+
+### UPDATE Order Actualizamos las ordenes
+PUT http://localhost:4004/odata/v4/gestion-de-pedidos/UpdateOrder('client1@client1.com')
+Content-Type: application/json
+
+{
+    "FirstName": "si se actualizo ",
+    "LastName": "si se actualizo"
+}
+
+###Get Customer Rate - Function     !! me genera un error solucionar 13.3
+GET http://localhost:4004/odata/v4/gestion-de-pedidos/GetClientTaxRate(ClientEmail='client1@client1.com')
+
+### Cancelar Orden - Action       !! me genera error solucionar 13.3
+POST  http://localhost:4004/odata/v4/gestion-de-pedidos/cancelOrder
+Content-Type: application/json
+
+{
+    "clientEmail" : "client1@client1.com"
+}
+
+###Get Customer Rate - Function BOUND    !! me genera error solucionar 13.4
+GET http://localhost:4004/odata/v4/gestion-de-pedidos/Orders('client1@client1.com')/GestionDePedidos.GetClientTaxRate(ClientEmail='client2@client2.com')
+
+### Cancelar Orden - Action  BOUND     !! me genera error solucionar  video 13.4
+POST  http://localhost:4004/odata/v4/gestion-de-pedidos//Orders('client1@client1.com')/GestionDePedidos.cancelOrder
+Content-Type: application/json
+
+{
+    "clientEmail" : "client1@client1.com"
+}
+
+### Get Incidents
+GET http://localhost:4004/odata/v4/sapbackend-exit/Incidents
+
